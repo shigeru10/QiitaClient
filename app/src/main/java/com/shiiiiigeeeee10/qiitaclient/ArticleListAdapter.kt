@@ -18,8 +18,10 @@ class ArticleListAdapter(private val context: Context) : BaseAdapter() {
     override fun getItem(position: Int): Any = articles[position]
 
     override fun getItemId(p0: Int): Long = 0
-    
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View =
+
+    override fun getView(position: Int,
+                         convertView: View?,
+                         parent: ViewGroup?): View =
             ((convertView as? ArticleView) ?: ArticleView(context)).apply {
                 setArticle(articles[position])
             }
